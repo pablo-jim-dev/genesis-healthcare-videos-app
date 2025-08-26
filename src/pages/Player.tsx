@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import ReactPlayer from 'react-player'
-import { useSearchParams } from 'react-router'
+import { useSearchParams, useNavigate } from 'react-router'
 import Header from '../components/Header';
 
 const Player = () => {
     const [searchParams] = useSearchParams();
     const [video, setVideo] = useState<string | null>(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         console.log(Object.fromEntries(searchParams));
@@ -17,6 +18,11 @@ const Player = () => {
         }
     }, [searchParams])
 
+    const handleGoBack = () => {
+        // Hold to add any action here...
+        navigate(-1);
+    }
+
     return (
         <>
             <Header />
@@ -26,6 +32,7 @@ const Player = () => {
                         <ReactPlayer
                             autoPlay
                             muted={true}
+                            onEnded={handleGoBack}
                             src={decodeURIComponent(video || '')}
                             controls
                             width='80%'

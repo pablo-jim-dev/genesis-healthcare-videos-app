@@ -25,41 +25,41 @@ const Home = () => {
     }, [show]);
 
     const VIDEOS = [
-        // {
-        //     id: 1,
-        //     title: "Carga de reactivos de ensayo",
-        //     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
-        //     thumbnail: "/videos/2/2.png",
-        //     src: '/videos/2/2.mp4'
-        // },
         {
-            id: 2,
+            id: 1,
             title: "Consejos para la carga",
             description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
             thumbnail: "/videos/1/1.png",
             src: '/videos/1/1.mp4'
         },
-        // {
-        //     id: 3,
-        //     title: "Carga de muestras",
-        //     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
-        //     thumbnail: "/videos/1/1.png",
-        //     src: '/videos/1/1.mp4'
-        // },
+        {
+            id: 2,
+            title: "Carga de reactivos de ensayo",
+            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+            thumbnail: "/videos/2/2.png",
+            src: '/videos/2/2.mp4'
+        },
+        {
+            id: 3,
+            title: "Carga de muestras",
+            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+            thumbnail: "/videos/3/3.png",
+            src: '/videos/3/3.mp4'
+        },
         {
             id: 4,
-            title: "Carga de MTU",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+            title: "Reactivo de ensayo",
+            description: "Reactivo listo para su uso, disponible en presentaciones de kits de 1,000 y 5,000 pruebas. Cada kit se encuentra subdividido en juegos de reactivos para 250 pruebas, lo que permite una dosificación eficiente y evita el desperdicio.",
             thumbnail: "/videos/4/4.png",
             src: '/videos/4/4.mp4'
         },
-        // {
-        //     id: 5,
-        //     title: "Carga MTU con el Módulo de Expansión Universal",
-        //     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
-        //     thumbnail: "/videos/1/1.png",
-        //     src: '/videos/1/1.mp4'
-        // },
+        {
+            id: 5,
+            title: "Carga de reactivo de ensayo",
+            description: "Los reactivos se colocan en una gradilla con guía visual, que se inserta en el compartimento refrigerado del equipo. Los reactivos de captura se cargan en su compartimiento a temperatura ambiente.",
+            thumbnail: "/videos/5/5.png",
+            src: '/videos/5/5.mp4'
+        },
         {
             id: 6,
             title: "Vaciar residuos",
@@ -73,6 +73,20 @@ const Home = () => {
             description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
             thumbnail: "/videos/7/7.png",
             src: '/videos/7/7.mp4'
+        },
+        {
+            id: 8,
+            title: "Carga de reactivos de ensayo",
+            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+            thumbnail: "/videos/8/8.png",
+            src: '/videos/8/8.mp4'
+        },
+        {
+            id: 9,
+            title: "Carga de reactivos de ensayo",
+            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+            thumbnail: "/videos/9/9.png",
+            src: '/videos/9/9.mp4'
         }
     ];
 
@@ -120,7 +134,7 @@ const Home = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: 20 }}
                                 transition={{ duration: 0.8, ease: 'backInOut', delay: 0.6 }}
-                                className="absolute right-0 bottom-0 flex flex-row items-center select-none">
+                                className="fixed right-10 bottom-10 flex flex-row items-center select-none">
                                 <div className="w-auto h-auto p-4 bg-[#0076D3]/30 backdrop-blur-3xl rounded-lg shadow-lg">
                                     <p className="text-xl text-white">Haz click en cualquier video para reproducirlo</p>
                                 </div>
