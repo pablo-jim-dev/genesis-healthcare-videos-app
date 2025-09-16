@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { FaLinkedin } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
 import { useNavigate } from 'react-router';
+import { TbMessageCircleQuestion } from "react-icons/tb";
 
 const Sleep = () => {
     const [show, setShow] = useState(true);
@@ -28,6 +29,11 @@ const Sleep = () => {
             icon: <TbWorld />,
             qr: 'qr/website.png'
         },
+        {
+            id: 3,
+            icon: <TbMessageCircleQuestion />,
+            qr: 'qr/forms.png'
+        }
     ];
 
     useEffect(() => {
