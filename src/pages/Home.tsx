@@ -34,55 +34,48 @@ const Home = () => {
         },
         {
             id: 2,
-            title: "REACTIVO DE ENSAYO",
-            description: "Reactivo listo para su uso, disponible en presentaciones de kits de 1,000 y 5,000 pruebas. Cada kit se encuentra subdividido en juegos de reactivos para 250 pruebas,lo que permite una dosificación eficiente y evita el desperdicio.",
-            thumbnail: "/videos/2/2.png",
-            src: '/videos/2/2.mp4'
-        },
-        {
-            id: 3,
             title: "CARGA DE REACTIVO DE ENSAYO",
             description: "“El sistema Panther emplea gradillas con codificación de color y separa los reactivos en compartimientos refrigerados y a temperatura ambiente, garantizando almacenamiento adecuado y operación confiable.”",
             thumbnail: "/videos/3/3.png",
             src: '/videos/3/3.mp4'
         },
         {
-            id: 4,
+            id: 3,
             title: "CARGA DE MUESTRAS EN GRADILLA",
             description: "“El sistema Panther dispone de gradillas con capacidad para 15 posiciones, destinadas a muestras o calibradores. Su diseño ergonómico permite una carga sencilla y eficiente.”",
             thumbnail: "/videos/4/4.png",
             src: '/videos/4/4.mp4'
         },
         {
-            id: 5,
+            id: 4,
             title: "CARGA DE MUESTRAS EN EQUIPO",
             description: "“El compartimiento de gradillas del sistema Panther admite hasta 8 gradillas (120 muestras) con lector de código de barras integrado, permitiendo una carga y descarga continua para máxima eficiencia.”",
             thumbnail: "/videos/5/5.png",
             src: '/videos/5/5.mp4'
         },
         {
-            id: 6,
+            id: 5,
             title: "CARGA DE PUNTAS",
             description: "“El sistema Panther ofrece capacidad para 6 gradillas de 96 puntas cada una, que el operador coloca de forma sencilla y práctica. Su diseño permite carga continua,garantizando eficiencia operativa y máxima productividad.”",
             thumbnail: "/videos/6/6.png",
             src: '/videos/6/6.mp4'
         },
         {
-            id: 7,
+            id: 6,
             title: "DESECHOS",
             description: "“El sistema Panther cuenta con compartimientos para desechos líquidos y sólidos de 750 de capacidad, lo que asegura un flujo de trabajo continuo y eficiente, con sustitución rápida y sencilla para el operador.”",
             thumbnail: "/videos/7/7.png",
             src: '/videos/7/7.mp4'
         },
         {
-            id: 8,
+            id: 7,
             title: "MANTENIMIENTOS",
             description: "“El sistema Panther requiere mantenimientos sencillos por parte del operador, lo que reduce la interacción con el equipo y evita retrasos en el flujo de trabajo.”",
             thumbnail: "/videos/8/8.png",
             src: '/videos/8/8.mp4'
         },
         {
-            id: 9,
+            id: 8,
             title: "CARGA DE MTU'S",
             description: "“El sistema Panther incorpora un compartimiento para la unidad multitubo (MTU) con capacidad de 125 MTU's. Su diseño permite una carga sencilla, rápida y continua durante todo el proceso, optimizando la eficiencia del flujo de trabajo.”",
             thumbnail: "/videos/9/9.png",
