@@ -10,12 +10,7 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: [
-        'favicon.ico',
-        'vite.svg',
-        'logo_white.png',
-        'qr/*.png'
-      ],
+      includeAssets: ['logo_white.png', 'qr/*.png', 'GABO/*.png', 'videos/**'],
       manifest: {
         name: 'Genesis Healthcare Advisers',
         short_name: 'Genesis Healthcare Advisers',
@@ -31,7 +26,8 @@ export default defineConfig({
       },
       workbox: {
         // Solo precachea tipos conocidos y evita capturar TODO
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,jpg,jpeg,woff2,mp4}'],
+        globPatterns: ['**/*.{js,css,html,svg,png,mp4,webm,ico}'],
+
         // Asegura que las peticiones a imágenes NO se manden a index.html
         navigateFallback: 'index.html',
         navigateFallbackDenylist: [
@@ -44,11 +40,8 @@ export default defineConfig({
         runtimeCaching: [
           {
             urlPattern: ({ request }) => request.destination === 'image',
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'images',
-              expiration: { maxEntries: 200, maxAgeSeconds: 60 * 60 * 24 * 30 }
-            }
+            handler: 'StaleWhileRevalidate',
+            options: { cacheName: 'images' }
           }
         ]
       }
