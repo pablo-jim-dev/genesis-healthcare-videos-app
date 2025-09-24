@@ -9,8 +9,8 @@ const Sleep = () => {
     const [show, setShow] = useState(true);
     const navigate = useNavigate();
     const PET_ICONS = [
-        "/GABO/g-1.png", "/GABO/g-2.png", "/GABO/g-3.png",
-        "/GABO/g-4.png", "/GABO/g-5.png", "/GABO/g-6.png", "/GABO/g-7.png",
+        "GABO/g-1.png", "GABO/g-2.png", "GABO/g-3.png",
+        "GABO/g-4.png", "GABO/g-5.png", "GABO/g-6.png", "GABO/g-7.png",
     ];
     const [petSrc] = useState(() => PET_ICONS[Math.floor(Math.random() * PET_ICONS.length)]);
     const SOCIAL_MEDIA_LINKS = [
