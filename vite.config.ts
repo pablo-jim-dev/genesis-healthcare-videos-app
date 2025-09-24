@@ -10,53 +10,48 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
-      pwaAssets: {
-        disabled: false,
-        config: true,
-      },
-
+      includeAssets: [
+        'favicon.ico',
+        'vite.svg',
+        'logo_white.png',
+        'qr/*.png'
+      ],
       manifest: {
-        theme_color: "#8936ff",
-        background_color: "#424242",
+        name: 'Genesis Healthcare Advisers',
+        short_name: 'Genesis Healthcare Advisers',
+        theme_color: '#8936ff',
+        background_color: '#424242',
+        display: 'fullscreen',
+        start_url: '/',
+        scope: '/',
         icons: [
-          {
-            purpose: "maskable",
-            sizes: "512x512",
-            src: "icon512_maskable.png",
-            type: "image/png"
-          },
-          {
-            purpose: "any",
-            sizes: "512x512",
-            src: "icon512_rounded.png",
-            type: "image/png"
-          }
-        ],
-        orientation: "any",
-        display: "fullscreen",
-        lang: "es-MX",
-        name: "Genesis Healthcare Advisers",
-        short_name: "Genesis Healthcare Advisers",
-        start_url: "/",
-        scope: "/",
+          { src: '/icon512_maskable.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+          { src: '/icon512_rounded.png', sizes: '512x512', type: 'image/png', purpose: 'any' }
+        ]
       },
-
       workbox: {
-        globPatterns: ["**/*"],
+        // Solo precachea tipos conocidos y evita capturar TODO
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,jpg,jpeg,woff2,mp4}'],
+        // Asegura que las peticiones a imágenes NO se manden a index.html
+        navigateFallback: 'index.html',
+        navigateFallbackDenylist: [
+          // cualquier archivo con extensión o bajo /qr/
+          /\/qr\/.*/, /\.[^/]+$/    // .png, .svg, .ico, etc.
+        ],
         cleanupOutdatedCaches: true,
         clientsClaim: true,
-        maximumFileSizeToCacheInBytes: 80000000,
-      },
-      includeAssets: [
-        "**/*",
-      ],
-
-      devOptions: {
-        enabled: false,
-        navigateFallback: 'index.html',
-        suppressWarnings: true,
-        type: 'module',
-      },
+        maximumFileSizeToCacheInBytes: 80_000_000,
+        runtimeCaching: [
+          {
+            urlPattern: ({ request }) => request.destination === 'image',
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'images',
+              expiration: { maxEntries: 200, maxAgeSeconds: 60 * 60 * 24 * 30 }
+            }
+          }
+        ]
+      }
     })
   ],
 })
