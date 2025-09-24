@@ -14,9 +14,9 @@ const Sleep = () => {
     ];
     const [petSrc] = useState(() => PET_ICONS[Math.floor(Math.random() * PET_ICONS.length)]);
     const SOCIAL_MEDIA_LINKS = [
-        { id: 1, icon: <FaLinkedin />, qr: '/qr/linkedin.png' },
-        { id: 2, icon: <TbWorld />, qr: '/qr/website.png' },
-        { id: 3, icon: <TbMessageCircleQuestion />, qr: '/qr/forms.png' },
+        { id: 1, icon: <FaLinkedin />, qr: 'qr/linkedin.png' },
+        { id: 2, icon: <TbWorld />, qr: 'qr/website.png' },
+        { id: 3, icon: <TbMessageCircleQuestion />, qr: 'qr/forms.png' },
     ];
 
     useEffect(() => {
